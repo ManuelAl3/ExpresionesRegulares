@@ -21,8 +21,8 @@ export default function RFC() {
     }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" placeholder="RFC" {...register("RFC", {
+    <form class="col-sm-10" onSubmit={handleSubmit(onSubmit)}>
+      <input class="form-control" type="text" placeholder="RFC" {...register("RFC", {
                     required: {
                       value: true,
                       message: "Campo obligatorio",
@@ -40,7 +40,7 @@ export default function RFC() {
                     {errors.RFC.message}
                   </span>
                 )}
-      <input type="submit" />
+      <button type="submit" class="btn btn-outline-success">Validar</button>
     </form>
   );
 }
